@@ -9,4 +9,4 @@ def decode_message( s: str, p: str) -> bool:
             for j in range(1,len(p)+1):
                 dp[i][j] = (p[j-1] in [s[i-1],'?','*'] and dp[i-1][j-1]) or (p[j-1] == '*' and (dp[i][j-1] or dp[i-1][j]))
   
-        return dp[len(s)][len(p)]
+        return 0
